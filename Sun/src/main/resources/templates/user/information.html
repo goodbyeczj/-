@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport" />
+
+    <!-- Site Properities -->
+    <meta name="generator" content="Visual Studio 2015" />
+    <title>Stagb Admin Template</title>
+    <meta name="description" content="Stagb Admin Template" />
+    <meta name="keywords" content="html5, ,semantic,ui, library, framework, javascript,jquery,template,blog,stagb,template" />
+    <link th:href="@{/webjars/Semantic-UI/2.4.1/semantic.min.css}" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="ui container" style="padding-top:10%">
+        <div class="ui four steps">
+            <div class="active step">
+                <i class="payment icon"></i>
+                <div class="content">
+                    <div class="title">应聘信息</div>
+                </div>
+            </div>
+            <div class="step">
+                <i class="truck icon"></i>
+                <div class="content">
+                    <div class="title">个人信息</div>
+                </div>
+            </div>
+            <div class="active step">
+                <i class="payment icon"></i>
+                <div class="content">
+                    <div class="title">教育背景</div>
+                </div>
+            </div>
+            <div class="disabled step">
+                <i class="info icon"></i>
+                <div class="content">
+                    <div class="title">实战经历</div>
+                </div>
+            </div>
+        </div>
+        <h2 class="ui <!--dividing--> header">
+            <i class="pencil alternate icon"></i>
+            <div class="content">
+                编写简历
+            </div>
+        </h2>
+        <form class="ui form">
+            <h4 class="ui dividing header">个人信息</h4>
+            <div class="field">
+                <label>诚信条款*</label>
+                    <div class="ui toggle checkbox">
+                        <label>我认同睿客邦公司正直诚信价值观，承诺所填简历真实可信，并对由于提供虚假信息而引发的结果承担相应的法律责任，如有虚假，责任自负。</label>
+                        <input type="checkbox" tabindex="0" class="hidden">
+                    </div>
+            </div>
+            <div class="field">
+                <label>应聘类型*</label>
+                <div class="ui fluid search selection dropdown">
+                        <input type="hidden" name="country">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">选择部门 </div>
+                        <div class="menu">
+                            <div class="item" data-value="ht">软件开发-后台开发</div>
+                            <div class="item" data-value="qd">软件开发-前端开发</div>
+                            <div class="item" data-value="ai">算法开发-AI开发</div>
+                        </div>
+                    </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>面试地点</label>
+                    <div class="ui fluid search selection dropdown">
+                        <input type="hidden" name="country">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">北京</div>
+                        <div class="menu">
+                            <div class="item" data-value="远程面试">远程面试</div>
+                            <div class="item" data-value="北京">北京</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>招聘类型*</label>
+                    <div class="ui fluid search selection dropdown">
+                        <input type="hidden" name="country">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">校园招聘</div>
+                        <div class="menu">
+                            <div class="item" data-value="校园招聘">校园招聘</div>
+                            <div class="item" data-value="社会招聘">社会招聘</div>
+                            <div class="item" data-value="暑期实习">暑期实习</div>
+                            <div class="item" data-value="日常实习">日常实习</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="ui dividing header">Billing Information</h4>
+            <div class="field">
+                <label>Card Type</label>
+                <div class="ui selection dropdown">
+                    <input type="hidden" name="card[type]">
+                    <div class="default text">Type</div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div class="item" data-value="visa">
+                            <i class="visa icon"></i>
+                            Visa
+                        </div>
+                        <div class="item" data-value="amex">
+                            <i class="amex icon"></i>
+                            American Express
+                        </div>
+                        <div class="item" data-value="discover">
+                            <i class="discover icon"></i>
+                            Discover
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fields">
+                <div class="seven wide field">
+                    <label>Card Number</label>
+                    <input type="text" name="card[number]" maxlength="16" placeholder="Card #">
+                </div>
+                <div class="three wide field">
+                    <label>CVC</label>
+                    <input type="text" name="card[cvc]" maxlength="3" placeholder="CVC">
+                </div>
+                <div class="six wide field">
+                    <label>Expiration</label>
+                    <div class="two fields">
+                        <div class="field">
+                            <select class="ui fluid search dropdown" name="card[expire-month]">
+                                <option value="">Month</option>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="card[expire-year]" maxlength="4" placeholder="Year">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="ui dividing header">Receipt</h4>
+            <div class="field">
+                <label>Send Receipt To:</label>
+                <div class="ui fluid multiple search selection dropdown">
+                    <input type="hidden" name="receipt">
+                    <i class="dropdown icon"></i>
+                    <div class="default text">Saved Contacts</div>
+                    <div class="menu">
+                        <div class="item" data-value="jenny" data-text="Jenny">
+                            <img class="ui mini avatar image" src="../images/avatar/small/jenny.jpg">
+                            Jenny Hess
+                        </div>
+                        <div class="item" data-value="elliot" data-text="Elliot">
+                            <img class="ui mini avatar image" src="../images/avatar/small/elliot.jpg">
+                            Elliot Fu
+                        </div>
+                        <div class="item" data-value="stevie" data-text="Stevie">
+                            <img class="ui mini avatar image" src="../images/avatar/small/stevie.jpg">
+                            Stevie Feliciano
+                        </div>
+                        <div class="item" data-value="christian" data-text="Christian">
+                            <img class="ui mini avatar image" src="../images/avatar/small/christian.jpg">
+                            Christian
+                        </div>
+                        <div class="item" data-value="matt" data-text="Matt">
+                            <img class="ui mini avatar image" src="../images/avatar/small/matt.jpg">
+                            Matt
+                        </div>
+                        <div class="item" data-value="justen" data-text="Justen">
+                            <img class="ui mini avatar image" src="../images/avatar/small/justen.jpg">
+                            Justen Kitsune
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui segment">
+                <div class="field">
+                    <div class="ui toggle checkbox">
+                        <input type="checkbox" name="gift" tabindex="0" class="hidden">
+                        <label>Do not include a receipt in the package</label>
+                    </div>
+                </div>
+            </div>
+            <div class="ui button" tabindex="0">Submit Order</div>
+        </form>
+    </div>
+    <script src="js/jquery-2.1.4.min.js">
+    </script>
+    <script th:src="@{/webjars/Semantic-UI/2.4.1/semantic.min.js}"></script>
+    <script src="/js/user/main.js" th:src="@{/js/user/main.js}"></script>
+</body>
+</html>

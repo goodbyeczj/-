@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://39.107.246.154:3306/sun
+    username: root
+    password: RKBai123.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  thymeleaf:
+    cache: false
